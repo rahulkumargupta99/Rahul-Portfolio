@@ -5,7 +5,7 @@ import express from "../public/express.png";
 import reactjs from "../public/reactjs.png";
 import nodejs from "../public/node.png";
 
-function Porject() {
+function Project() {
   const cardItem = [
     {
       id: 1,
@@ -74,4 +74,4 @@ function Porject() {
     </div>
   );
 }
-export default Porject;
+export default Project;
