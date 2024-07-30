@@ -33,7 +33,7 @@ function Home() {
             </div>
             <br />
             <p className="text-sm md:text-md text-justify">
-            Hello! I'm Rahul kumar gupta, a passionate and dedicated web developer specializing in React. With a strong foundation in HTML, CSS, JavaScript, and modern JavaScript libraries and frameworks, I bring innovative ideas to life on the web.
+            Hello! I'm Rahul kumar Gupta, a passionate and dedicated web developer specializing in React. With a strong foundation in HTML, CSS, JavaScript, and modern JavaScript libraries and frameworks, I bring innovative ideas to life on the web.
             </p>
             <br />
             {/* {social media icons} */}
