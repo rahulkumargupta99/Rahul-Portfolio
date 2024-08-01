@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -8,8 +8,8 @@ function Navbar() {
     { id: 1, text: "Home" },
     { id: 2, text: "About" },
     { id: 3, text: "Project" },
-    { id: 5, text: "Experience" },
-    { id: 6, text: "Contact" },
+    { id: 4, text: "Experience" },
+    { id: 5, text: "Contact" },
   ];
 
   return (
@@ -35,7 +35,7 @@ function Navbar() {
           <ul className="hidden md:flex space-x-8 text-gray-800">
             {navItems.map(({ id, text }) => (
               <li
-                className="hover:scale-105 duration-200 cursor-pointer"
+                className="hover:scale-105 duration-200 cursor-pointer hover:text-blue-500"
                 key={id}
               >
                 <Link
@@ -43,7 +43,7 @@ function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-70}
-                  activeClass="active"
+                  activeClass="text-blue-600 font-bold"
                 >
                   {text}
                 </Link>
@@ -64,7 +64,7 @@ function Navbar() {
           <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl text-gray-800">
             {navItems.map(({ id, text }) => (
               <li
-                className="hover:scale-105 duration-200 font-semibold cursor-pointer"
+                className="hover:scale-105 duration-200 font-semibold cursor-pointer hover:text-blue-500"
                 key={id}
               >
                 <Link
@@ -73,7 +73,7 @@ function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-70}
-                  activeClass="active"
+                  activeClass="text-blue-600 font-bold"
                 >
                   {text}
                 </Link>
@@ -85,4 +85,5 @@ function Navbar() {
     </div>
   );
 }
+
 export default Navbar;
