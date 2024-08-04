@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { MdMenu, MdClose } from "react-icons/md";
+import React, { useState, useEffect } from "react";
+import { MdMenu, MdClose, MdWbSunny, MdNightsStay } from "react-icons/md";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navbar() {
   const [menu, setMenu] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   const navItems = [
     { id: 1, text: "Home" },
     { id: 2, text: "About" },
@@ -12,8 +13,24 @@ function Navbar() {
     { id: 5, text: "Contact" },
   ];
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("darkMode");
+    if (savedTheme) {
+      setDarkMode(savedTheme === "true");
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode);
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
-    <div className="max-w-screen-2xl container mx-auto px-4 md:px-8 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-gray-100">
+    <div className="max-w-screen-2xl container mx-auto px-4 md:px-8 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-gray-100 dark:bg-gray-800 transition duration-300">
       <div className="flex justify-between items-center h-16">
         <div className="flex space-x-2 items-center">
           <a href="https://www.linkedin.com/in/rahul-kumar-gupta-93a9b3283/">
@@ -24,18 +41,18 @@ function Navbar() {
             />
           </a>
           <a href="https://www.linkedin.com/in/rahul-kumar-gupta-93a9b3283/">
-            <h1 className="font-semibold text-xl cursor-pointer text-gray-800">
+            <h1 className="font-semibold text-xl cursor-pointer text-gray-800 dark:text-gray-100">
               Rahu<span className="text-blue-600 text-2xl">l</span>
-              <p className="text-sm text-gray-600">Web Developer</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Web Developer</p>
             </h1>
           </a>
         </div>
-        {/* desktop navbar */}
-        <div>
-          <ul className="hidden md:flex space-x-8 text-gray-800">
+        {/* Desktop Navbar */}
+        <div className="flex items-center">
+          <ul className="hidden md:flex space-x-8 text-gray-800 dark:text-gray-100">
             {navItems.map(({ id, text }) => (
               <li
-                className="hover:scale-105 duration-200 cursor-pointer hover:text-blue-500"
+                className="hover:scale-105 duration-200 cursor-pointer hover:text-blue-500 dark:hover:text-blue-400"
                 key={id}
               >
                 <Link
@@ -51,20 +68,26 @@ function Navbar() {
             ))}
           </ul>
           <div
+            onClick={() => setDarkMode(!darkMode)}
+            className="cursor-pointer ml-4 text-gray-800 dark:text-gray-100"
+          >
+            {darkMode ? <MdWbSunny size={24} /> : <MdNightsStay size={24} />}
+          </div>
+          <div
             onClick={() => setMenu(!menu)}
-            className="md:hidden cursor-pointer text-gray-800"
+            className="md:hidden cursor-pointer ml-4 text-gray-800 dark:text-gray-100"
           >
             {menu ? <MdClose size={24} /> : <MdMenu size={24} />}
           </div>
         </div>
       </div>
-      {/* mobile navbar */}
+      {/* Mobile Navbar */}
       {menu && (
-        <div className="bg-gray-100">
-          <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl text-gray-800">
+        <div className="bg-gray-100 dark:bg-gray-800 transition duration-300">
+          <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl text-gray-800 dark:text-gray-100">
             {navItems.map(({ id, text }) => (
               <li
-                className="hover:scale-105 duration-200 font-semibold cursor-pointer hover:text-blue-500"
+                className="hover:scale-105 duration-200 font-semibold cursor-pointer hover:text-blue-500 dark:hover:text-blue-400"
                 key={id}
               >
                 <Link
