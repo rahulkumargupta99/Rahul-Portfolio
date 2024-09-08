@@ -28,7 +28,7 @@ function Home() {
             </div>
             <br />
             <p className="text-sm md:text-md text-justify">
-              Hello! I'm Rahul Kumar Gupta, a passionate and dedicated web developer specializing in React. With a strong foundation in HTML, CSS, JavaScript, and modern JavaScript libraries and frameworks, I bring innovative ideas to life on the web.
+            Hello! I'm Rahul Kumar Gupta, a passionate and dedicated web developer specializing in React. With a strong foundation in HTML, CSS, JavaScript, and modern JavaScript libraries and frameworks, I bring innovative ideas to life on the web. I also have solid expertise in Java and pride myself on being a quick learner, always eager to explore new technologies and solve complex problems.
             </p>
             <br />
             <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
@@ -84,5 +84,4 @@ function Home() {
     </>
   );
 }
-
 export default Home;

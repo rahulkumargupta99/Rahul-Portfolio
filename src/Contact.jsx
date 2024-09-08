@@ -13,21 +13,29 @@ function Contact() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    const userInfo = {
-      name: data.name,
-      email: data.email,
-      message: data.message,
-    };
+    if (Object.keys(errors).length === 0) {
+      const userInfo = {
+        name: data.name,
+        email: data.email,
+        message: data.message,
+      };
 
-    try {
-      await axios.post("https://getform.io/f/ayvpegpb", userInfo);
+      try {
+        // Send form data to getform.io
+        await axios.post("https://getform.io/f/ayvpegpb", userInfo);
 
-      await emailjs.sendForm('service_0u8fqys', 'template_8ecfxpr', form.current, 'htTrJO5Q4Jj-hZG4i');
+        // Send form data to email using EmailJS
+        await emailjs.sendForm('service_0u8fqys', 'template_8ecfxpr', form.current, 'htTrJO5Q4Jj-hZG4i');
 
-      toast.success("Your message has been sent");
-    } catch (error) {
-      console.error("Error sending message:", error);
-      toast.error("Something went wrong");
+        // Display success toast
+        toast.success("Your message has been sent");
+      } catch (error) {
+        console.error("Error sending message:", error);
+        toast.error("Something went wrong");
+      }
+    } else {
+      // Display error toast if the form is not valid
+      toast.error("Please fill out all required fields correctly");
     }
   };
 
@@ -110,5 +118,4 @@ function Contact() {
     </div>
   );
 }
-
 export default Contact;

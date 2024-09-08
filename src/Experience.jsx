@@ -3,8 +3,9 @@ import html from "../public/html.png";
 import css from "../public/css.jpg";
 import java from "../public/java.png";
 import javascript from "../public/javascript.png";
-import oracle from "../public/oracle.png";
-import spring from "../public/spring.png";
+// import oracle from "../public/oracle.png";
+import mysql from "../public/mysql.png";
+import nodeJs from "../public/nodeJs.png";
 import springBoot from "../public/springBoot.jpg";
 import reactjs from "../public/reactjs.png";
 import express from "../public/express.png";
@@ -16,8 +17,9 @@ function Experience() {
     { id: 2, logo: css, name: "CSS" },
     { id: 3, logo: java, name: "Java" },
     { id: 4, logo: javascript, name: "JavaScript" },
-    { id: 5, logo: oracle, name: "Oracle" },
-    { id: 6, logo: spring, name: "Spring" },
+    // { id: 5, logo: oracle, name: "Oracle" },
+    { id: 5, logo: mysql, name: "mysql" },
+    { id: 6, logo: nodeJs, name: "nodeJs" },
     { id: 7, logo: springBoot, name: "Spring Boot" },
     { id: 8, logo: reactjs, name: "ReactJS" },
     { id: 9, logo: express, name: "Express" },

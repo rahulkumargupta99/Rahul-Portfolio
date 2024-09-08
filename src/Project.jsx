@@ -6,6 +6,7 @@ import Game from "../public/Game.png";
 import Lending from "../public/Lending.png";
 import Netflix from "../public/Netflix.png";
 import Nike from "../public/Nike.jpg";
+import ToDo from "../public/To-do.jpg";
 
 function Project() {
   const [expanded, setExpanded] = useState({});
@@ -66,6 +67,13 @@ function Project() {
       name: "Nike Landing Page",
       link: "https://project-1-omega-nine.vercel.app/",
       description: "A landing page for Nike shoes created using React. It features a dynamic and interactive design with sections showcasing product highlights, images, and a user-friendly interface. This project highlights skills in React development and modern web design.",
+    },
+    {
+      id: 8,
+      logo: ToDo,
+      name: "To-Do List App",
+      link: "https://todo-list-app-flax-two.vercel.app/",
+      description: "A to-do list app created using React. It features task management functionality, including adding, deleting, and toggling tasks, along with persistent storage using localStorage. This project demonstrates skills in React development and state management.",
     },
   ];
 
