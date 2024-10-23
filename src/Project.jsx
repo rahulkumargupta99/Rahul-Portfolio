@@ -7,6 +7,7 @@ import Lending from "../public/Lending.png";
 import Netflix from "../public/Netflix.png";
 import Nike from "../public/Nike.jpg";
 import ToDo from "../public/To-do.jpg";
+import Tomoto from "../public/Tomoto.jpg";
 
 function Project() {
   const [expanded, setExpanded] = useState({});
@@ -74,6 +75,13 @@ function Project() {
       name: "To-Do List App",
       link: "https://todo-list-app-flax-two.vercel.app/",
       description: "A to-do list app created using React. It features task management functionality, including adding, deleting, and toggling tasks, along with persistent storage using localStorage. This project demonstrates skills in React development and state management.",
+    },
+    {
+      id: 9,
+      logo: Tomoto,
+      name: "Tomoto food Dilivery",
+      link: "https://food-del-frontend-fu07.onrender.com/",
+      description: "Built the Toomato Food Delivery Website using the MERN stack (MongoDB, Express, React, Node.js). It lets users order food online with secure Stripe payments. The site is fully responsive for all devices. Took two months to build and was an awesome learning experience!.",
     },
   ];
 
