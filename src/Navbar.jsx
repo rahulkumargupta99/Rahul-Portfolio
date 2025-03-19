@@ -10,7 +10,8 @@ function Navbar() {
     { id: 2, text: "About" },
     { id: 3, text: "Project" },
     { id: 4, text: "Experience" },
-    { id: 5, text: "Contact" },
+    { id: 5, text: "Certificate" },
+    { id: 6, text: "Contact" },
   ];
 
   useEffect(() => {
@@ -43,7 +44,7 @@ function Navbar() {
           <a href="https://www.linkedin.com/in/rahul-kumar-gupta-93a9b3283/">
             <h1 className="font-semibold text-xl cursor-pointer text-gray-800 dark:text-gray-100">
               Rahu<span className="text-blue-600 text-2xl">l</span>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Web Developer</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Software Developer</p>
             </h1>
           </a>
         </div>
@@ -108,5 +109,4 @@ function Navbar() {
     </div>
   );
 }
-
 export default Navbar;

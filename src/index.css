@@ -12,7 +12,6 @@ body {
   --background-color-dark: #1a1a1a;
   --text-color-dark: #ffffff;
 }
-
 .light {
   --background-color: var(--background-color-light);
   --text-color: var(--text-color-light);

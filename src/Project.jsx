@@ -8,6 +8,7 @@ import Netflix from "../public/Netflix.png";
 import Nike from "../public/Nike.jpg";
 import ToDo from "../public/To-do.jpg";
 import Tomoto from "../public/Tomoto.jpg";
+import Real from "../public/RealState.png";
 
 function Project() {
   const [expanded, setExpanded] = useState({});
@@ -22,66 +23,85 @@ function Project() {
   const cardItem = [
     {
       id: 1,
-      logo: Spotify,
-      name: "Spotify Clone",
-      link: "https://spotifyclone-rahul-kumar-gupta-s-projects.vercel.app/",
-      description: "A Spotify clone built using HTML and CSS. It features a responsive design, easy navigation, and custom playback controls. This project highlights skills in building user-friendly and visually appealing web applications.",
+      logo: Tomoto,
+      name: "Tomoto food Dilivery",
+      link: "https://food-del-frontend-fu07.onrender.com/",
+      description:
+        "Built the Toomato Food Delivery Website using the MERN stack (MongoDB, Express, React, Node.js). It lets users order food online with secure Stripe payments. The site is fully responsive for all devices. Took two months to build and was an awesome learning experience!.",
     },
     {
       id: 2,
-      logo: Stopwatch,
-      name: "Stopwatch",
-      link: "https://stopwatch-three-murex-57.vercel.app/",
-      description: "A simple stopwatch built with HTML, CSS, and JavaScript. It includes start, stop, and reset functionality, and features a clean, user-friendly design. This project demonstrates skills in front-end development and JavaScript programming.",
+      logo: Real,
+      name: "Real-State",
+      link: "https://e-state-beige.vercel.app/",
+      description: "Real Estate - A Simple Property Listing Website",
     },
     {
       id: 3,
-      logo: Weather,
-      name: "Weather Website",
-      link: "https://weatherwebsite-rahul-kumar-gupta-s-projects.vercel.app/",
-      description: "A weather app built with HTML, CSS, and JavaScript. It provides current weather information based on the user's location and features a clean, responsive design. This project showcases skills in web development and API integration.",
+      logo: ToDo,
+      name: "To-Do List App",
+      link: "https://todo-list-app-flax-two.vercel.app/",
+      description:
+        "A to-do list app created using React. It features task management functionality, including adding, deleting, and toggling tasks, along with persistent storage using localStorage. This project demonstrates skills in React development and state management.",
     },
     {
       id: 4,
-      logo: Game,
-      name: "Tic-tac-toe Game",
-      link: "https://tictactoegame-rahul-kumar-gupta-s-projects.vercel.app/",
-      description: "A classic Tic-Tac-Toe game developed using HTML, CSS, and JavaScript. It features a simple, interactive interface where players can take turns marking Xs and Os. This project demonstrates skills in game logic implementation and user interface design.",
+      logo: Weather,
+      name: "Weather Website",
+      link: "https://weatherwebsite-rahul-kumar-gupta-s-projects.vercel.app/",
+      description:
+        "A weather app built with HTML, CSS, and JavaScript. It provides current weather information based on the user's location and features a clean, responsive design. This project showcases skills in web development and API integration.",
     },
     {
       id: 5,
-      logo: Lending,
-      name: "E-learning Landing Page",
-      link: "https://lendingpage-rahul-kumar-gupta-s-projects.vercel.app/",
-      description: "A landing page for an e-learning platform created with HTML and CSS. It features an attractive, user-friendly design with sections for course highlights, testimonials, and sign-up options. This project highlights skills in web design and layout development.",
+      logo: Stopwatch,
+      name: "Stopwatch",
+      link: "https://stopwatch-three-murex-57.vercel.app/",
+      description:
+        "A simple stopwatch built with HTML, CSS, and JavaScript. It includes start, stop, and reset functionality, and features a clean, user-friendly design. This project demonstrates skills in front-end development and JavaScript programming.",
     },
     {
-      id: 6,
-      logo: Netflix,
-      name: "Netflix Clone",
-      link: "https://netflixclone-4ajia0mt4-rahul-kumar-gupta-s-projects.vercel.app/",
-      description: "A Netflix clone built using HTML and CSS. It features a visually appealing layout that mimics the Netflix interface, including sections for featured content, categories, and a responsive design. This project demonstrates skills in front-end development and UI/UX design.",
+      id: 8,
+      logo: Game,
+      name: "Tic-tac-toe Game",
+      link: "https://tictactoegame-rahul-kumar-gupta-s-projects.vercel.app/",
+      description:
+        "A classic Tic-Tac-Toe game developed using HTML, CSS, and JavaScript. It features a simple, interactive interface where players can take turns marking Xs and Os. This project demonstrates skills in game logic implementation and user interface design.",
     },
+
+    
     {
       id: 7,
       logo: Nike,
       name: "Nike Landing Page",
       link: "https://project-1-omega-nine.vercel.app/",
-      description: "A landing page for Nike shoes created using React. It features a dynamic and interactive design with sections showcasing product highlights, images, and a user-friendly interface. This project highlights skills in React development and modern web design.",
+      description:
+        "A landing page for Nike shoes created using React. It features a dynamic and interactive design with sections showcasing product highlights, images, and a user-friendly interface. This project highlights skills in React development and modern web design.",
     },
     {
       id: 8,
-      logo: ToDo,
-      name: "To-Do List App",
-      link: "https://todo-list-app-flax-two.vercel.app/",
-      description: "A to-do list app created using React. It features task management functionality, including adding, deleting, and toggling tasks, along with persistent storage using localStorage. This project demonstrates skills in React development and state management.",
+      logo: Netflix,
+      name: "Netflix Clone",
+      link: "https://netflixclone-4ajia0mt4-rahul-kumar-gupta-s-projects.vercel.app/",
+      description:
+        "A Netflix clone built using HTML and CSS. It features a visually appealing layout that mimics the Netflix interface, including sections for featured content, categories, and a responsive design. This project demonstrates skills in front-end development and UI/UX design.",
     },
+   
     {
       id: 9,
-      logo: Tomoto,
-      name: "Tomoto food Dilivery",
-      link: "https://food-del-frontend-fu07.onrender.com/",
-      description: "Built the Toomato Food Delivery Website using the MERN stack (MongoDB, Express, React, Node.js). It lets users order food online with secure Stripe payments. The site is fully responsive for all devices. Took two months to build and was an awesome learning experience!.",
+      logo: Spotify,
+      name: "Spotify Clone",
+      link: "https://spotifyclone-rahul-kumar-gupta-s-projects.vercel.app/",
+      description:
+        "A Spotify clone built using HTML and CSS. It features a responsive design, easy navigation, and custom playback controls. This project highlights skills in building user-friendly and visually appealing web applications.",
+    },
+    {
+      id: 10,
+      logo: Lending,
+      name: "E-learning Landing Page",
+      link: "https://lendingpage-rahul-kumar-gupta-s-projects.vercel.app/",
+      description:
+        "A landing page for an e-learning platform created with HTML and CSS. It features an attractive, user-friendly design with sections for course highlights, testimonials, and sign-up options. This project highlights skills in web design and layout development.",
     },
   ];
 
@@ -119,9 +139,7 @@ function Project() {
                 {expanded[id] ? "Show Less" : "Show More"}
               </button>
               {expanded[id] && (
-                <p className="mt-4 text-gray-700 text-sm">
-                  {description}
-                </p>
+                <p className="mt-4 text-gray-700 text-sm">{description}</p>
               )}
             </div>
           </div>
@@ -130,5 +148,4 @@ function Project() {
     </div>
   );
 }
-
 export default Project;
